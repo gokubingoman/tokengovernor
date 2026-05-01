@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">TokenGovernor</title>
+  <desc id="desc">Shield mark with balance scales  governance for AI agent context</desc>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d4f5c"/>
+      <stop offset="50%" stop-color="#126872"/>
+      <stop offset="100%" stop-color="#1a9aaa"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8c872"/>
+      <stop offset="100%" stop-color="#c9a227"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <!-- Shield -->
+  <path filter="url(#shadow)" fill="url(#g)" d="M256 48 L416 112 V272 Q416 384 256 464 Q96 384 96 272 V112 Z"/>
+  <path fill="none" stroke="url(#gold)" stroke-width="6" d="M256 72 L392 124 V268 Q392 358 256 424 Q120 358 120 268 V124 Z"/>
+  <!-- Scales -->
+  <g fill="none" stroke="#f4f7f8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="256" y1="140" x2="256" y2="300"/>
+    <line x1="176" y1="220" x2="336" y2="220"/>
+    <path d="M176 220 Q176 268 196 288 Q216 268 216 220"/>
+    <path d="M296 220 Q296 268 316 288 Q336 268 336 220"/>
+  </g>
+  <!-- Token arc -->
+  <ellipse cx="256" cy="352" rx="88" ry="28" fill="none" stroke="url(#gold)" stroke-width="5" opacity="0.9"/>
+  <text x="256" y="368" text-anchor="middle" font-family="system-ui, Segoe UI, sans-serif" font-size="42" font-weight="700" fill="#f4f7f8" letter-spacing="0.06em">TG</text>
+</svg>

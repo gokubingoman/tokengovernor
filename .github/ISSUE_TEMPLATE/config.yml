@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: TokenGovernor on GitHub
+    url: https://github.com/gokubingoman/tokengovernor
+    about: Issues and PRs for the OSS rules pack + CLI.
+  - name: RTK (shell output compression)
+    url: https://github.com/rtk-ai/rtk
+    about: Optional pairing — TokenGovernor docs link RTK in docs/RTK_PAIRING.md
