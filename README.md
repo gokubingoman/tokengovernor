@@ -68,8 +68,6 @@ Subscribe or purchase through the channel documented on **[TokenGovernor Plus](h
 - [UPGRADE.md](UPGRADE.md)
 - [SECURITY.md](SECURITY.md)
 
-_Optional — TokenGovernor is rules-only. If you also filter **shell / CLI** output before it reaches a model, see [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md); it is not required._
-
 ---
 
 ## Contributors

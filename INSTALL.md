@@ -55,8 +55,6 @@ Use low-token discipline: no default full-repo scans; plan before multi-file edi
 
 Use **`workspace-memory/`** for durable, non-secret context: `north-star.md`, `_index.md`, `topics/`, `decisions/`. Policy and loading order: **`packs/memory/tiered-context-loading.md`**, **`packs/memory/retrieval-first-memory.md`**.
 
-_Shell / CLI output filtering is out of scope for these files. If you use external tooling for that, see [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md) (optional)._
-
 ---
 
 ## TokenGovernor Plus

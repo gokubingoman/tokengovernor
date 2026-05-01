@@ -49,7 +49,7 @@ This baseline focuses on **context, tokens, and safety**. **TokenGovernor Plus**
 
 ## Shell output
 
-This baseline does **not** install or enforce shell/terminal filters. That is a separate layer. If you care about it, your team can document or adopt tooling as needed — **`docs/RTK_PAIRING.md`** in this kit is an **optional** pointer, not part of the rule set.
+This baseline does **not** proxy or filter terminal output. If your workflow needs that, handle it outside these Markdown rules.
 
 ---
 

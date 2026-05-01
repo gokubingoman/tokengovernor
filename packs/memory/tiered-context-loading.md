@@ -43,7 +43,6 @@ This is **plain Markdown** — no graph database or vendor hooks required.
 | **`workspace-memory/README.md`** | Structure and agent rules for local notes |
 | **`packs/memory/retrieval-first-memory.md`** | What to store / omit; retrieval-first habit |
 | **`universal/TOKEN_GOVERNOR_LITE.md`** | Speculative read caps, logs, planning |
-| **`docs/RTK_PAIRING.md`** | _Optional._ Shell/CLI filtering notes — orthogonal to TokenGovernor rules |
 
 ---
 
