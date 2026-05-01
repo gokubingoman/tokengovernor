@@ -51,15 +51,11 @@ Use low-token discipline: no default full-repo scans; plan before multi-file edi
 
 ---
 
-## RTK (command output)
-
-TokenGovernor shapes **how the model reasons**; **[RTK](https://github.com/rtk-ai/rtk)** narrows **what reaches the model** from the shell. They stack cleanly — see [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md).
-
----
-
 ## Project memory
 
 Use **`workspace-memory/`** for durable, non-secret context: `north-star.md`, `_index.md`, `topics/`, `decisions/`. Policy and loading order: **`packs/memory/tiered-context-loading.md`**, **`packs/memory/retrieval-first-memory.md`**.
+
+_Shell / CLI output filtering is out of scope for these files. If you use external tooling for that, see [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md) (optional)._
 
 ---
 

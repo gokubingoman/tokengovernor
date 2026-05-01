@@ -1,31 +1,13 @@
-# TokenGovernor and RTK
+# Optional: shell / CLI output
 
-Two layers, one workflow:
+TokenGovernor is **Markdown rules** for agent behavior. It does **not** ship a shell proxy.
 
-| Layer | Role |
-|-------|------|
-| **TokenGovernor** | **Rules** — how the agent explores, plans, and asks before risky steps. |
-| **[RTK](https://github.com/rtk-ai/rtk)** | **Shell proxy** — narrows `git`, test, and build output before it reaches the model. |
+Some teams also want **less raw `git`, test, or build output** in the model. That is a **different layer**.
 
-They address different problems and stack cleanly.
+**[RTK](https://github.com/rtk-ai/rtk)** is one open tool for filtered CLI output. Use it only if it fits your stack — it is **not** a TokenGovernor dependency.
 
----
+- Install and configure RTK from **its** documentation.
+- RTK hooks the shell; TokenGovernor hooks agent instructions. Either order is fine.
+- IDE-native **Read** / **Grep** (and similar) are not the same as shell piping — RTK’s docs explain limits.
 
-## Setup
-
-1. Install **RTK** and run `rtk init` for your environment (see RTK’s documentation).
-2. Add **TokenGovernor** to your project — copy **`universal/`**, **`cursor/`**, **`packs/`** (Lite), or run **`tg init`** from **TokenGovernor Plus**.
-
-RTK’s shell hook does not rewrite IDE-native tools such as inline **Read** / **Grep** in some products. Use shell commands or explicit `rtk …` where you want output filtered.
-
----
-
-## Order
-
-Either order works. Many teams enable **RTK** first (command line), then wire **TokenGovernor** (project rules).
-
----
-
-## Expectations
-
-TokenGovernor does not duplicate RTK’s measured shell compression. For **token estimates** tied to filtered command output, rely on **RTK**’s documentation and tooling.
+For expectations and savings claims, rely on **RTK**’s own materials, not TokenGovernor.

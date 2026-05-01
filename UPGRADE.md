@@ -17,9 +17,3 @@ Submodules: `git submodule update --remote` (or pin to tags for stability).
 ## If you use TokenGovernor Plus
 
 Use the **`tg`** workflow and release notes from your **Plus** distribution to refresh rules and templates inside application repos.
-
----
-
-## RTK
-
-For **shell output** pairing, see [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md).

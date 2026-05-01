@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 
-[Installation](INSTALL.md) · [RTK pairing](docs/RTK_PAIRING.md) · [Security](SECURITY.md)
+[Installation](INSTALL.md) · [Security](SECURITY.md)
 
 </div>
 
@@ -25,8 +25,6 @@
 | **Behavioral guardrails** | Written limits on speculative reads, log dumps, and scope creep — not a hard quota engine. |
 | **Cross-tool consistency** | One `tokengovernor/` folder: universal baseline, Cursor rules, and optional **packs** per IDE. |
 | **Optional project memory** | **`workspace-memory/`** tiered notes (north star, topics, decisions) so context compounds without pasting the tree. |
-
-**Shell / CLI output** is a separate concern. For filtered command output, pair with **[RTK](https://github.com/rtk-ai/rtk)** — [RTK pairing](docs/RTK_PAIRING.md).
 
 ---
 
@@ -49,29 +47,28 @@ Add TokenGovernor next to your application code and point each tool at the paths
 
 ## TokenGovernor Plus
 
-**Plus** is the full distribution: **`tg` CLI**, one-command install into app repos, extended packs (including advanced examples), benchmarks, and update workflows suited to teams that want everything in one place.
+**Plus** (**from $9/month**) is the full distribution—same behavioral baseline as Lite, packaged for teams that want automation and depth:
 
-**Plus includes:**
+| Lite (this repo) | Plus |
+|------------------|------|
+| Copy or submodule Markdown | **`tg` CLI** — `init`, `memory-init`, `doctor`, `version` |
+| Baseline `packs/` | **Extended `packs/`** — premium-style norms, longer examples |
+| No installer in-tree | **One-command layout** into app repos via **`@tokengovernor/cli`** |
+| — | **Benchmarks** and methodology docs |
 
-- **`tg`** — `init`, `memory-init`, `doctor`, `version`
-- **One-command layout** — drops `universal/`, `cursor/`, `packs/`, `workspace-memory/` into a target folder
-- **Advanced rules and premium templates**
-- **Industry-oriented packs** (where provided in your Plus edition)
-- **AgentOS-friendly** structures for projects that use them
-- **Release-aligned updates** for CLI and bundled templates
-
-Access Plus through the channel where you obtained your license or distribution. The open **Lite** edition remains here for anyone who only needs the Markdown kit.
+Subscribe or purchase through the channel documented on **[TokenGovernor Plus](https://github.com/gokubingoman/tokengovernor-plus)** (see INSTALL). The open **Lite** edition stays here for anyone who only needs the Markdown kit for free.
 
 ---
 
 ## Reference
 
 - [INSTALL.md](INSTALL.md)
-- [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [CHANGELOG.md](CHANGELOG.md)
 - [UPGRADE.md](UPGRADE.md)
 - [SECURITY.md](SECURITY.md)
+
+_Optional — TokenGovernor is rules-only. If you also filter **shell / CLI** output before it reaches a model, see [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md); it is not required._
 
 ---
 

@@ -3,6 +3,6 @@ contact_links:
   - name: TokenGovernor Lite — repository
     url: https://github.com/gokubingoman/tokengovernor
     about: Issues and pull requests for the open rules kit (Markdown).
-  - name: RTK (shell output compression)
+  - name: RTK — optional shell-output tool
     url: https://github.com/rtk-ai/rtk
-    about: Optional companion — see docs/RTK_PAIRING.md in TokenGovernor.
+    about: Unrelated project; short pointer in docs/RTK_PAIRING.md only if you use it.
