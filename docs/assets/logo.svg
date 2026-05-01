@@ -1,52 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 22 22" role="img" aria-labelledby="title desc">
   <title id="title">TokenGovernor</title>
-  <desc id="desc">Shield with balance scales and token rings — governance for AI agent context.</desc>
+  <desc id="desc">Rounded square mark matching the TokenGovernor landing nav — off-white to zinc gradient with a subtle edge.</desc>
   <defs>
-    <linearGradient id="shieldFace" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#082f3a"/>
-      <stop offset="50%" stop-color="#0d4f5f"/>
-      <stop offset="100%" stop-color="#138899"/>
+    <linearGradient id="navTile" gradientUnits="userSpaceOnUse" x1="2" y1="2" x2="20" y2="20">
+      <!-- Aligns with landing: linear-gradient(145deg, #fafafa 0%, #52525b 100%) -->
+      <stop offset="0%" stop-color="#fafafa"/>
+      <stop offset="100%" stop-color="#52525b"/>
     </linearGradient>
-    <linearGradient id="rim" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f2e8d5"/>
-      <stop offset="45%" stop-color="#c4a052"/>
-      <stop offset="100%" stop-color="#7a6120"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#7fd4cf"/>
-    </linearGradient>
-    <filter id="drop" x="-12%" y="-12%" width="124%" height="124%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.3"/>
-    </filter>
   </defs>
-
-  <!-- Shield body -->
-  <path filter="url(#drop)" fill="url(#shieldFace)"
-    d="M256 40c61 0 130 19 188 48v182c0 84-58 161-188 206-130-45-188-122-188-206V88c58-29 127-48 188-48z"/>
-  <path fill="none" stroke="url(#rim)" stroke-width="4.5" stroke-linejoin="round"
-    d="M256 60c55 0 117 17 168 41v173c0 73-50 138-168 178-118-40-168-105-168-178V101c51-24 113-41 168-41z"/>
-
-  <!-- Inset panel -->
-  <path fill="#051820" opacity="0.45"
-    d="M256 96c78 0 136 24 136 52v110c0 68-55 128-136 156-81-28-136-88-136-156V148c0-28 58-52 136-52z"/>
-
-  <!-- Scales of justice — simplified for small-size clarity -->
-  <g fill="none" stroke="url(#accent)" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="256" y1="132" x2="256" y2="216" stroke-width="9"/>
-    <line x1="164" y1="216" x2="348" y2="216" stroke-width="9"/>
-    <line x1="164" y1="216" x2="164" y2="248" stroke-width="5"/>
-    <line x1="348" y1="216" x2="348" y2="248" stroke-width="5"/>
-    <path d="M124 248 q40 48 80 0" stroke-width="8"/>
-    <path d="M308 248 q40 48 80 0" stroke-width="8"/>
-  </g>
-
-  <!-- Token rings -->
-  <ellipse cx="256" cy="344" rx="104" ry="30" fill="none" stroke="url(#rim)" stroke-width="3.5" opacity="0.9"/>
-  <ellipse cx="256" cy="344" rx="72" ry="21" fill="none" stroke="#7fd4cf" stroke-width="2" opacity="0.35"/>
-
-  <!-- Monogram -->
-  <text x="256" y="400" text-anchor="middle"
-    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    font-size="54" font-weight="700" fill="#f4faf9" letter-spacing="-0.03em">TG</text>
+  <rect
+    x="0.5"
+    y="0.5"
+    width="21"
+    height="21"
+    rx="6"
+    ry="6"
+    fill="url(#navTile)"
+    stroke="rgba(255, 255, 255, 0.12)"
+    stroke-width="1"
+  />
 </svg>
