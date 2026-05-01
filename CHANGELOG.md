@@ -4,6 +4,11 @@ Notable changes to **TokenGovernor Lite** follow [Keep a Changelog](https://keep
 
 ## [Unreleased]
 
+### Added
+
+- **Documentation:** [docs/GLOSSARY.md](docs/GLOSSARY.md), [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md); README / INSTALL / CONTRIBUTING link to [i18n/README.md](i18n/README.md) hub.
+- **i18n:** translated hub docs for **es**, **zh-CN**, and **ja** under `i18n/<locale>/` (README, INSTALL, SECURITY, PACKS-OVERVIEW). Rule trees remain English.
+
 ### Removed
 
 - All **RTK** references and **`docs/RTK_PAIRING.md`** — shell tooling is outside this project’s scope.

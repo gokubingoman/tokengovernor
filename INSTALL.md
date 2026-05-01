@@ -60,3 +60,15 @@ Use **`workspace-memory/`** for durable, non-secret context: `north-star.md`, `_
 ## TokenGovernor Plus
 
 If you use **Plus**, install with the **`tg`** CLI (`tg init`, `tg memory-init`, `tg doctor`) from your Plus distribution. Plus is not required to use Lite.
+
+---
+
+## Troubleshooting
+
+See **[docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** (agents not following rules, broken paths, submodules, Lite vs Plus).
+
+---
+
+## Other languages
+
+Human-facing guides: **[i18n/README.md](i18n/README.md)** (Español, 简体中文, 日本語). Rule files under `packs/` remain English for model compatibility.
