@@ -1,28 +1,36 @@
-# Retrieval-first memory policy
+# Retrieval-first memory
 
-**Goal:** Useful long-term context **without** turning memory into a junk drawer or secret store.
+**Goal:** Durable, useful context **without** turning memory into a junk drawer or secret vault.
+
+---
 
 ## Store
 
-- Architecture facts (with dates if stale risk)
-- Stable API shapes and links to canonical code paths
-- Decisions with rationale (ADR-lite)
+- Architecture facts (date if they go stale)
+- Stable API shapes and pointers to canonical source
+- Decisions with rationale (lightweight ADR style)
 - Known issues and mitigations
-- **Non-secret** environment facts: service names, ports, feature flags (not values)
+- **Non-secret** environment facts — service names, ports, feature-flag **names** (not secret values)
+
+---
 
 ## Do not store
 
 - API keys, tokens, passwords, private keys
-- Full prompts, full chat logs, full stack traces
-- Entire files copied “for reference”
-- Customer PII or proprietary third-party data
+- Entire prompts, chat logs, or stack traces
+- Whole files copied “for reference”
+- Customer PII or third-party confidential material
 
-## Retrieval rule
+---
 
-Before loading “memory,” **retrieve** only what the current task needs (match AgentOS **Context To Load** lists when `agentos/` is present). Never paste entire `memory/` into chat by default.
+## Retrieval habit
 
-**Tiered loading:** keep always-on rules small; pull facts **on demand** via search or scoped reads — see **`tiered-context-loading.md`** (pattern adapted from [Obsidian Mind](https://github.com/breferrari/obsidian-mind)).
+Before loading “memory,” **fetch only what the current task needs**. If the project defines AgentOS **Context To Load** lists under **`agentos/`**, honor those. Do not paste an entire memory tree into chat by default.
 
-## Refresh
+**Tiered loading:** keep standing rules small; pull facts **on demand** — see **`tiered-context-loading.md`** (pattern related to [Obsidian Mind](https://github.com/breferrari/obsidian-mind)).
 
-When code contradicts memory, **fix memory or flag it**—do not let agents rely on ghost architecture.
+---
+
+## Maintenance
+
+When code and memory disagree, **update the notes or flag the drift** — do not let agents rely on obsolete architecture.

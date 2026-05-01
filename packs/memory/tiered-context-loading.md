@@ -1,42 +1,52 @@
 # Tiered context loading
 
-**Goal:** Spend tokens on **what the task needs now**, not on dumping everything you might someday need.
+**Intent:** Spend tokens on **what the task needs now**, not on material you might need someday.
 
-This pattern is adapted from the **tiered context** idea described in **[Obsidian Mind](https://github.com/breferrari/obsidian-mind)** (vault + hooks + optional QMD semantic search). TokenGovernor does **not** ship Obsidian, ShardMind, or QMD — but the **discipline** transfers to any repo: rules + memory + codebase notes without pasting whole trees into the model.
+Adapted from the **tiered context** model in **[Obsidian Mind](https://github.com/breferrari/obsidian-mind)** (vault discipline, optional semantic tooling). TokenGovernor does **not** bundle Obsidian, ShardMind, or QMD — the **habits** transfer: rules, memory, and code notes without dumping whole trees into the model.
 
-## Tiers (generic coding agent)
+---
 
-| Tier | What belongs here | Token stance |
-|------|-------------------|--------------|
-| **Always (small)** | Project rules: **`TOKEN_GOVERNOR_LITE`**, tool rules (`cursor/rules.md`, etc.), optionally a **short excerpt** from **`workspace-memory/north-star.md`**, 1–2 lines of **current goal** if needed | Keep stable and short; avoid stuffing “everything useful” here |
-| **On-demand (targeted)** | Answers from **search**: grep-like finds, memory lookups, doc/query tools, optional **semantic** retrieval if your stack has it | Pull **snippets + paths**, not whole directories |
-| **Triggered (tiny)** | Per-turn hints: classification nudges, lint summaries, “you just wrote a file — validate frontmatter” style checks | Keep hints **brief**; no transcripts |
-| **Rare / explicit** | Full-file reads, large dumps, whole logs | Only when **justified** or **user-requested** — matches Lite’s “no full logs / no full-file dumps by default” |
+## Layers
 
-## Operational rules
+| Layer | What belongs | Token stance |
+|-------|----------------|--------------|
+| **Always-on (small)** | Project rules — **`TOKEN_GOVERNOR_LITE`**, tool rules such as `cursor/rules.md`, optional **short** excerpt from **`workspace-memory/north-star.md`**, one or two lines of **current goal** if useful | Stable, short; resist turning this into a scrapbook |
+| **On-demand (targeted)** | Grep-like hits, memory lookups, doc queries, optional semantic retrieval if your stack provides it | Snippets and paths, not whole directories |
+| **Triggered (minimal)** | Per-turn hints — lint summaries, “you just wrote a file — check X” nudges | Brief nudges only |
+| **Rare / explicit** | Full-file reads, large dumps, entire logs | Only when **justified** or **explicitly requested** — aligns with “no full logs / no surprise full-file dumps” |
 
-1. **Retrieve, then read.** Prefer search/list/index → open **one** file or **one** region over scanning trees blindly (pairs with **`retrieval-first-memory.md`**).
-2. **Bootstrap discipline.** If you inject “session start” context (Cursor rules, custom prompts, hooks), use **excerpts + file/index listings**, not full note bodies or dumping all of **`workspace-memory/`** (see **`workspace-memory/README.md`** after `tg init`).
-3. **Isolate heavy work.** Long audits or big transforms belong in **separate sub-sessions** or tools so they don’t bloat the main thread — same *effect* as Obsidian Mind’s subagents, without requiring their stack.
-4. **Semantic search is optional.** If you don’t run QMD/RAG, tiered loading still works: **narrow grep**, **path hints from the user**, and **small excerpts**.
+---
 
-## `workspace-memory/` (ships with `tg init`)
+## Operating habits
 
-New installs get **`tokengovernor/workspace-memory/`** (or `<target>/workspace-memory/`): a minimal **project-local** note tree (`north-star.md`, `_index.md`, `topics/`, `decisions/`, optional `sessions/`). Read **`workspace-memory/README.md`** for conventions.
+1. **Retrieve, then read.** Prefer search or index → open **one** file or **one** region instead of walking the tree blindly (pairs with **`retrieval-first-memory.md`**).
+2. **Bootstrap with excerpts.** Session-start injections (rules, prompts, hooks) should use **excerpts and listings**, not every file under **`workspace-memory/`** (see **`workspace-memory/README.md`**).
+3. **Isolate heavy work.** Large audits or refactors belong in **separate sessions** or tools so they do not inflate the main thread.
+4. **Semantic search is optional.** Without RAG, tiered loading still works: **narrow search**, **human path hints**, **small excerpts**.
 
-Existing repos predating this folder can run **`tg memory-init`** once.
+---
 
-This is **not** Obsidian — no graph DB, no hooks — just Markdown + the same tiered habits.
+## `workspace-memory/`
 
-## Relation to other TokenGovernor docs
+When TokenGovernor is present in your project you get **`tokengovernor/workspace-memory/`** (or `<target>/workspace-memory/`): **`north-star.md`**, **`_index.md`**, **`topics/`**, **`decisions/`**, optional **`sessions/`**. Conventions live in **`workspace-memory/README.md`**.
 
-| Doc | Role |
-|-----|------|
-| **`workspace-memory/README.md`** | Layout and agent rules for project-local notes |
-| **`packs/memory/retrieval-first-memory.md`** | What to store / not store; retrieval-first rule |
-| **`universal/TOKEN_GOVERNOR_LITE.md`** | Hard caps: speculative reads, logs, plans |
-| **`docs/RTK_PAIRING.md`** | Shell **output** compression — orthogonal layer |
+Older installs that predate the folder can add it with **`tg memory-init`** when using **TokenGovernor Plus**.
 
-## Honesty
+This is **plain Markdown** — no graph database or vendor hooks required.
 
-Obsidian Mind’s README cites concrete token **targets** for *their* hooks + vault (e.g. ~2K “always” band). Your numbers depend on rules length, model, and tooling — **measure locally** if you need budgets; this file describes **shape**, not a quota guarantee.
+---
+
+## How this fits the rest of TokenGovernor
+
+| Document | Role |
+|----------|------|
+| **`workspace-memory/README.md`** | Structure and agent rules for local notes |
+| **`packs/memory/retrieval-first-memory.md`** | What to store / omit; retrieval-first habit |
+| **`universal/TOKEN_GOVERNOR_LITE.md`** | Speculative read caps, logs, planning |
+| **`docs/RTK_PAIRING.md`** | **Shell output** compression — separate layer |
+
+---
+
+## Measurement
+
+Obsidian Mind publishes example token **targets** for **their** automation stack. Your figures depend on rule length, model, and tooling — **measure in your environment** if you need budgets. This document defines **shape**, not a guarantee.

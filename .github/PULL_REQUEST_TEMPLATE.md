@@ -1,7 +1,8 @@
 ## Summary
 
+<!-- What changes are you proposing, and why? -->
+
 ## Checklist
 
-- [ ] Docs updated if user-facing behavior or install path changed
-- [ ] No secrets, API keys, or `.env` files
-- [ ] After changing `universal/`, `cursor/`, or `packs/`, ran `pnpm --filter @tokengovernor/cli build` if touching CLI templates
+- [ ] User-facing docs updated if behavior or install paths change
+- [ ] No secrets, API keys, credentials, or `.env` files included

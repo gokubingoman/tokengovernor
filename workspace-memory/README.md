@@ -1,42 +1,52 @@
 # Workspace memory
 
-**Project-local notes** for humans and AI agents — inspired by tiered “vault” patterns (e.g. [Obsidian Mind](https://github.com/breferrari/obsidian-mind)), without requiring Obsidian or extra services.
+Structured **project-local notes** for engineers and agents — inspired by tiered vault patterns such as [Obsidian Mind](https://github.com/breferrari/obsidian-mind), without requiring Obsidian, plugins, or hosted services.
 
-Live beside **`universal/`**, **`cursor/`**, and **`packs/`** under your **`tokengovernor/`** folder (or whatever folder name you used when copying Lite / running **`tg init`** in Plus).
+Place **`workspace-memory/`** beside **`universal/`**, **`cursor/`**, and **`packs/`** inside your TokenGovernor folder (whether you copied **Lite** or used **`tg init`** from **Plus**).
 
-## Job-to-be-done
+---
 
-- **Compound context** across sessions (goals, decisions, topic facts) without pasting the whole repo into chat.
-- **Tiered loading**: keep a tiny slice always relevant; pull depth **only when needed** — see **`../packs/memory/tiered-context-loading.md`** and **`../packs/memory/retrieval-first-memory.md`**.
+## Outcomes
+
+- **Compound context** across sessions — goals, decisions, and topic facts — without pasting the repository into chat.
+- **Tiered loading:** keep a thin always-on slice; pull depth **only when the task requires it** — see **`../packs/memory/tiered-context-loading.md`** and **`../packs/memory/retrieval-first-memory.md`**.
+
+---
 
 ## Layout
 
 | Path | Purpose | Tier |
 |------|---------|------|
-| **`north-star.md`** | Current priorities, active themes, non-goals — **keep short** | Often summarized / excerpted at session start |
-| **`_index.md`** | Map of what lives where (one line per note); update when you add topics/decisions | Lightweight pointer |
-| **`topics/`** | One file per theme (API conventions, deployment quirks, “how we test”) | On-demand reads |
-| **`decisions/`** | ADR-lite / decision records | On-demand reads |
-| **`sessions/`** | Optional session summaries or scratch — trim or delete when promoted | Ephemeral (often **gitignored** — see below) |
+| **`north-star.md`** | Current priorities, active themes, explicit non-goals — **keep short** | Often summarized at session start |
+| **`_index.md`** | One-line map of notes; update when topics or decisions move | Lightweight pointer |
+| **`topics/`** | One file per theme (API conventions, deploy quirks, test strategy) | On demand |
+| **`decisions/`** | Lightweight decision records | On demand |
+| **`sessions/`** | Optional scratch or session notes — trim or promote upward | Often ephemeral (see **Git & privacy**) |
+
+---
 
 ## Rules for agents
 
-1. **Never paste this entire tree** into context by default.
-2. **Prefer** `_index.md` → open **one** targeted file → quote minimal excerpts.
-3. **North star**: at most a **small excerpt** unless the task is planning/strategy.
-4. When something belongs in memory **and** duplicates `north-star.md`, prefer **`topics/`** or **`decisions/`** and link from `_index.md`.
+1. **Never** paste the entire memory tree by default.
+2. Prefer **`_index.md`** → **one** targeted file → **short** excerpts.
+3. **`north-star.md`:** quote a **small** excerpt unless the task is planning or strategy.
+4. If new content overlaps **`north-star.md`**, route it to **`topics/`** or **`decisions/`** and link from **`_index.md`**.
+
+---
 
 ## Git & privacy
 
-- Default expectation: **git-tracked** like code so the team shares memory.
-- If **`sessions/`** holds rough dumps or personal notes, add to **`.gitignore`**:
+- Default: **track in Git** like source so the team shares the same memory surface.
+- If **`sessions/`** holds rough drafts or personal notes, ignore it in **`.gitignore`**, for example:
 
   ```
   tokengovernor/workspace-memory/sessions/
   ```
 
-  (Adjust path if your TokenGovernor folder name differs.)
+  Adjust the path if your TokenGovernor folder uses a different name.
 
-## Do **not** store here
+---
 
-Secrets, tokens, keys, customer PII, full chat logs, full stack traces — same policy as **`../packs/memory/retrieval-first-memory.md`**.
+## Do not store here
+
+Secrets, tokens, keys, customer PII, full chat logs, or full stack traces — same boundaries as **`../packs/memory/retrieval-first-memory.md`**.

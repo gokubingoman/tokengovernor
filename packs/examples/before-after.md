@@ -1,18 +1,26 @@
-# Example: before → after (discipline)
+# Example: before and after
+
+Illustrates how TokenGovernor changes agent **process**, not magic.
+
+---
 
 ## Before (high waste)
 
-- User: “Fix the bug.”
-- Agent: Reads 20 files, dumps three full components, proposes a refactor of the entire module, runs broad search, suggests npm installs without asking.
+1. **You:** “Fix the bug.”
+2. **Agent:** Reads many files, pastes large components, proposes a broad refactor, runs wide search, suggests dependency installs without asking.
 
-## After (TokenGovernor universal + packs)
+---
 
-- User: “Fix the bug.”
-- Agent: Asks for **error text + one file path** OR reads **≤3** files with a stated hypothesis.
-- Agent: **Plans** the minimal change, lists files to touch, implements, verifies with **small** repro steps.
-- Agent: **Does not** install deps or delete files without confirmation.
-- Agent: Offers **`tg-compact`** if the thread is long.
+## After (TokenGovernor baseline + packs)
 
-## Take-away
+1. **You:** “Fix the bug.”
+2. **Agent:** Asks for **error text and one file path**, or reads **≤ ~3** files under a stated hypothesis.
+3. **Agent:** **Plans** a minimal change, names files to touch, implements, verifies with a **small** repro.
+4. **Agent:** **Does not** install dependencies or delete files without confirmation.
+5. **Agent:** Offers **`tg-compact`** patterns when the thread is long.
 
-Rules = **process control**, not magic. The user still points the agent at the right smoke signal (error, file, or scope).
+---
+
+## Note
+
+Rules steer **process**. You still supply the signal (error snippet, path, or scope) that makes the task well-posed.

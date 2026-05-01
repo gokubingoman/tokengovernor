@@ -1,27 +1,35 @@
-# Cursor — TokenGovernor project rules
+# Cursor — TokenGovernor
 
-Apply these in **every** Agent / Chat session for this workspace.
+Apply these directives in **every** Agent / Chat session tied to this codebase.
 
-## Bootstrap
+---
 
-- Treat **`tokengovernor/universal/TOKEN_GOVERNOR_LITE.md`** (or your copy of **`universal/TOKEN_GOVERNOR_LITE.md`**) as the source of truth for core discipline.
-- Other tools: see **`packs/`** (Claude, Gemini, OpenCode, OpenClaw).
-- **Project memory:** if **`tokengovernor/workspace-memory/`** exists, use **`workspace-memory/README.md`** — tiered reads (`_index.md` → one topic/decision file); never dump the whole folder into chat.
-- Optional **premium** coding-norm packs live in **TokenGovernor Plus** if you use it.
+## Load order
 
-## Token & context discipline
+1. **`tokengovernor/universal/TOKEN_GOVERNOR_LITE.md`** (or **`universal/TOKEN_GOVERNOR_LITE.md`** if the `tokengovernor/` prefix is omitted).
+2. Tool-specific material in **`packs/`** (Claude, Gemini, OpenCode, OpenClaw) when the same project uses those agents.
+3. **Project memory:** if **`tokengovernor/workspace-memory/`** exists, honor **`workspace-memory/README.md`** — read **`_index.md`**, then **one** topic or decision file; never load the entire tree into context by default.
+4. **Extended coding norms** (assumptions, minimal scope, surgical edits, verifiable goals): available in **TokenGovernor Plus** packs when you use that edition — merge into project rules there if you want them always on.
 
-- Default: **no** broad codebase search without a stated hypothesis.
-- **Max ~3 file reads** before stopping to re-plan or ask for a path (unless user explicitly authorizes exploration).
-- **No full log paste** — summarize errors; ask for the smallest repro snippet.
-- Prefer **implementation plan** before touching more than **two** files in one task.
+---
+
+## Context discipline
+
+- **No** broad codebase search without a stated hypothesis.
+- **~Three speculative file reads**, then re-plan or ask for the next path unless the human expands scope.
+- **No full log paste** — summarize; request the smallest failing excerpt.
+- Prefer a short **implementation plan** before changing more than **two** files in one task.
+
+---
 
 ## Safety
 
-- **Never** commit `.env`, `.pem`, keys, or database dumps.
-- **Ask first** for: dependency install, git destructive ops, migrations, prod config, file deletes.
-- **Secrets:** refuse to echo or store; redact in summaries.
+- **Never** commit `.env`, `.pem`, private keys, or database dumps.
+- **Ask first** before: dependency installs, destructive Git operations, migrations, production configuration, or file deletes.
+- **Secrets:** do not echo or persist; redact in summaries.
 
-## Optional: AgentOS elsewhere
+---
 
-If another workspace adds an **`agentos/`** tree, follow that project’s AgentOS docs—TokenGovernor OSS does not ship **`agentos/`** in this repo.
+## AgentOS
+
+If the project includes an **`agentos/`** tree, follow that project’s AgentOS entrypoints. **TokenGovernor Lite** does not ship **`agentos/`** here.

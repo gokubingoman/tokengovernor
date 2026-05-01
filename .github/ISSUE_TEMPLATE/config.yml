@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: TokenGovernor on GitHub
+  - name: TokenGovernor Lite — repository
     url: https://github.com/gokubingoman/tokengovernor
-    about: Issues and PRs for the OSS rules pack + CLI.
+    about: Issues and pull requests for the open rules kit (Markdown).
   - name: RTK (shell output compression)
     url: https://github.com/rtk-ai/rtk
-    about: Optional pairing — TokenGovernor docs link RTK in docs/RTK_PAIRING.md
+    about: Optional companion — see docs/RTK_PAIRING.md in TokenGovernor.

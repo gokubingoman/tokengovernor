@@ -1,17 +1,21 @@
-# Command: tg-compact
+# Session command: compact handoff
 
-Use when **context is almost full** or a session is noisy.
+Use when **context is nearly full** or a thread has accumulated noise.
 
-## Instruction (paste)
+---
+
+## Paste into the agent
 
 ```txt
 TokenGovernor compact mode:
-1. Summarize what we decided and what remains in 8 bullets max.
-2. List the exact files that matter for the next step (max 5 paths).
-3. Propose a one-paragraph handoff I can paste into a new session.
-Do not re-read the repo; work only from what you already have unless I attach files.
+1. Summarize what was decided and what remains — maximum eight bullets.
+2. List the exact files that matter for the next step (maximum five paths).
+3. Propose one short handoff paragraph I can paste into a new session.
+Do not re-read the repository; work only from what you already know unless I attach files.
 ```
+
+---
 
 ## After compact
 
-Start a **new chat** with the handoff + minimal attachments (your task list or project `README`, plus focused source files).
+Start a **new chat** with the handoff text plus minimal attachments (task list, focused sources, or a short `README` excerpt).

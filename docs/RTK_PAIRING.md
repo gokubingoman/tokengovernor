@@ -1,19 +1,31 @@
-# TokenGovernor + RTK
+# TokenGovernor and RTK
 
-**TokenGovernor** = **rules** (how the agent behaves: bounded reads, plans, approval gates).  
-**[RTK](https://github.com/rtk-ai/rtk)** = **CLI proxy** (compresses `git status`, tests, etc., before output hits the model).
+Two layers, one workflow:
 
-They solve different layers. Using both is reasonable:
+| Layer | Role |
+|-------|------|
+| **TokenGovernor** | **Rules** — how the agent explores, plans, and asks before risky steps. |
+| **[RTK](https://github.com/rtk-ai/rtk)** | **Shell proxy** — narrows `git`, test, and build output before it reaches the model. |
 
-1. Install **RTK** and run `rtk init` for your agent (see RTK docs).
-2. Install **TokenGovernor** (`tg init` or copy `universal/`, `cursor/`, `packs/`).
+They address different problems and stack cleanly.
 
-RTK’s bash hook does **not** rewrite IDE-native tools like `Read` / `Grep` in some agents—RTK documents that; use shell commands or explicit `rtk …` where you want compression.
+---
 
-## Order of operations
+## Setup
 
-- Either order works. Most teams: **RTK first** (shell), then **TokenGovernor** (project rules file).
+1. Install **RTK** and run `rtk init` for your environment (see RTK’s documentation).
+2. Add **TokenGovernor** to your project — copy **`universal/`**, **`cursor/`**, **`packs/`** (Lite), or run **`tg init`** from **TokenGovernor Plus**.
 
-## Honesty
+RTK’s shell hook does not rewrite IDE-native tools such as inline **Read** / **Grep** in some products. Use shell commands or explicit `rtk …` where you want output filtered.
 
-Do not promise RTK-style “60–90% token savings” for TokenGovernor alone. For measurement and filtered command output, point people at **RTK**.
+---
+
+## Order
+
+Either order works. Many teams enable **RTK** first (command line), then wire **TokenGovernor** (project rules).
+
+---
+
+## Expectations
+
+TokenGovernor does not duplicate RTK’s measured shell compression. For **token estimates** tied to filtered command output, rely on **RTK**’s documentation and tooling.

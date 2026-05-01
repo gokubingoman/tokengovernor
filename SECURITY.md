@@ -1,15 +1,14 @@
 # Security
 
-TokenGovernor Lite is a **rules and documentation** repository (no runtime). Security issues may still matter (e.g. malicious instructions in docs, dependency supply chain if we add scripts later).
+TokenGovernor Lite is **documentation and rules** (Markdown). It does not run as a service in your stack. Security still matters: misleading or hostile instructions in files you trust could affect agent behavior.
 
-## Reporting
+## Reporting a vulnerability
 
-If you find a **security vulnerability**, please open a **private** report if your platform supports it, or email the maintainers (add contact when you publish).
+- Use **[GitHub private security reporting](https://github.com/gokubingoman/tokengovernor/security/advisories/new)** for this repository if you believe you have found a security issue.
+- Do **not** file public issues for undisclosed vulnerabilities.
 
-Do **not** open public issues for undisclosed exploits.
-
-For **non-sensitive** bugs, use normal [GitHub issues](https://github.com/gokubingoman/tokengovernor/issues).
+For **non-sensitive** bugs and improvements, use [GitHub Issues](https://github.com/gokubingoman/tokengovernor/issues).
 
 ## Scope
 
-This repo should **not** contain secrets, API keys, or customer data. If you find accidental exposure, notify maintainers immediately.
+This repository should not contain live secrets, API keys, or customer data. If you notice accidental exposure, report it through a private channel immediately.

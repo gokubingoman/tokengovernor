@@ -4,63 +4,67 @@
 
 # TokenGovernor
 
-**Free cost-control rules for AI coding agents.**
+**Token-efficient discipline for AI coding agents — rules you own.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 
-[Install](INSTALL.md) · [Pair with RTK](docs/RTK_PAIRING.md) · [Security](SECURITY.md)
+[Installation](INSTALL.md) · [RTK pairing](docs/RTK_PAIRING.md) · [Security](SECURITY.md)
 
 </div>
 
 ---
 
-## What this is
+## Overview
 
-**TokenGovernor** (this repo — **Lite**) helps AI coding agents **waste fewer tokens** through **rules and workflows**: bounded reads, plans before big edits, approval gates, and light-weight memory guidance.
+**TokenGovernor** is a **rules kit** for software teams using AI-assisted development. It tightens how agents read context, plan work, and ask before risky operations — so you spend fewer tokens on noise and more on shipping.
 
-- **Rules-based.** There is **no** hard runtime enforcement, license server, or hosted dashboard in this repo.
-- **Multi-tool.** Works with **Claude Code**, **OpenClaw**, **Cursor**, **Gemini CLI**, **OpenCode**, and other agents — copy the Markdown you need into each tool’s config.
-- **Complements output filters.** For **shell / CLI output** compression, pair with **[RTK](https://github.com/rtk-ai/rtk)** — see [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md).
+**TokenGovernor Lite** (this edition) is the **open, Markdown-only** layer: copy it into your repo, wire it into Cursor, Claude Code, OpenClaw, Gemini CLI, OpenCode, or other tools, and your agents inherit the same discipline everywhere.
 
-**TokenGovernor Plus** (separate product/repo) adds the **`tg`** CLI, polished installer, advanced rules, premium templates, industry packs, AgentOS-friendly layouts, and an update workflow. A future **Pro** / dashboard offering is **not** part of Lite.
+| You get | Details |
+|---------|---------|
+| **Behavioral guardrails** | Written limits on speculative reads, log dumps, and scope creep — not a hard quota engine. |
+| **Cross-tool consistency** | One `tokengovernor/` folder: universal baseline, Cursor rules, and optional **packs** per IDE. |
+| **Optional project memory** | **`workspace-memory/`** tiered notes (north star, topics, decisions) so context compounds without pasting the tree. |
 
----
-
-## What’s in this repo
-
-| Path | Purpose |
-|------|---------|
-| **`universal/TOKEN_GOVERNOR_LITE.md`** | Universal non-negotiables + low-token response shape |
-| **`cursor/rules.md`** | Cursor Agent / Chat baseline |
-| **`packs/`** | Claude, Gemini, OpenCode, OpenClaw, session commands, memory policy, security / approval gates, one simple example |
-| **`workspace-memory/`** | Optional project-local Markdown memory (north star, topics, decisions) |
+**Shell / CLI output** is a separate concern. For filtered command output, pair with **[RTK](https://github.com/rtk-ai/rtk)** — [RTK pairing](docs/RTK_PAIRING.md).
 
 ---
 
-## Quick start
+## Inside the kit
 
-Copy this repo (or a subtree) into your application project and point your agent at **`universal/TOKEN_GOVERNOR_LITE.md`** and **`cursor/rules.md`** (or the packs for other tools). See **[INSTALL.md](INSTALL.md)** for concrete paths and a paste snippet.
-
----
-
-## Upgrade to TokenGovernor Plus
-
-**Plus** is for teams that want install automation and deeper packs — not required to benefit from Lite.
-
-**Upgrade to TokenGovernor Plus** for:
-
-- **`tg` CLI** — `init`, `memory-init`, `doctor`, `version`
-- **One-command setup** — vendor rules into any app repo
-- **Advanced rules** and curated **premium templates**
-- **Industry packs**
-- **AgentOS-compatible** workflows and structure
-- **Update workflow** when we ship new packs and CLI behavior
-
-**Where to get Plus:** use your **TokenGovernor Plus** distribution or repo (commercial or private channel — not stored in this public Lite tree). If you maintain Plus separately, point contributors there for CLI and template development.
+| Path | Role |
+|------|------|
+| **`universal/TOKEN_GOVERNOR_LITE.md`** | Universal baseline: non‑negotiables, approval summary, low‑token response shape. |
+| **`cursor/rules.md`** | Cursor Agent / Chat rules wired to the same baseline. |
+| **`packs/`** | Claude, Gemini, OpenCode, OpenClaw, session commands, memory policy, security checklist, one worked example. |
+| **`workspace-memory/`** | Optional durable notes your team and agents share (see **`workspace-memory/README.md`**). |
 
 ---
 
-## Documentation
+## Getting started
+
+Add TokenGovernor next to your application code and point each tool at the paths you use. **[INSTALL.md](INSTALL.md)** has copy, submodule, and first-session steps.
+
+---
+
+## TokenGovernor Plus
+
+**Plus** is the full distribution: **`tg` CLI**, one-command install into app repos, extended packs (including advanced examples), benchmarks, and update workflows suited to teams that want everything in one place.
+
+**Plus includes:**
+
+- **`tg`** — `init`, `memory-init`, `doctor`, `version`
+- **One-command layout** — drops `universal/`, `cursor/`, `packs/`, `workspace-memory/` into a target folder
+- **Advanced rules and premium templates**
+- **Industry-oriented packs** (where provided in your Plus edition)
+- **AgentOS-friendly** structures for projects that use them
+- **Release-aligned updates** for CLI and bundled templates
+
+Access Plus through the channel where you obtained your license or distribution. The open **Lite** edition remains here for anyone who only needs the Markdown kit.
+
+---
+
+## Reference
 
 - [INSTALL.md](INSTALL.md)
 - [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md)

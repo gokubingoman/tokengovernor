@@ -1,18 +1,22 @@
-# Command: tg-low-token
+# Session command: low-token answers
 
-Use when answers are getting **long** or you want **minimal** assistant behavior.
+Use when replies are growing **long** or you want **minimal** assistant output.
 
-## Instruction (paste)
+---
+
+## Paste into the agent
 
 ```txt
 TokenGovernor low-token mode:
-- Answer in under 15 lines unless I say expand.
-- No code blocks over 40 lines.
-- No file dumps; use path:line references.
-- If uncertain, ask one clarifying question only.
+- Stay under fifteen lines unless I ask for more.
+- No code blocks longer than forty lines.
+- No file dumps — use path:line references.
+- If something is unclear, ask exactly one clarifying question.
 ```
 
-## When
+---
 
-- Tight loops, small tweaks, yes/no decisions.
-- You already know the file and need a surgical change.
+## When it helps
+
+- Tight feedback loops, small edits, yes/no decisions.
+- You already know the target file and need a surgical change.

@@ -1,7 +1,9 @@
-# Contributing (Lite)
+# Contributing
 
-- **Rules** live in **`universal/`**, **`cursor/`**, **`packs/`**, and **`workspace-memory/`** — keep edits focused, consistent tone, and safe for a **public** repo (no secrets, no customer-specific paths).
-- **CLI and advanced templates** are developed in **TokenGovernor Plus**, not in this Lite tree.
-- **Issues & PRs** — follow [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md): no `.env`, API keys, or credentials.
+Thank you for helping improve TokenGovernor Lite.
 
-By contributing, you agree your contributions are under the same license as this repo (MIT).
+- **Rules and memory scaffolds** live under **`universal/`**, **`cursor/`**, **`packs/`**, and **`workspace-memory/`**. Keep edits focused, consistent with the existing voice, and safe for a public repository (no secrets, API keys, customer-specific paths, or private identifiers).
+- **CLI, benchmarks, and extended template pipelines** are developed in **TokenGovernor Plus**, not in this repository.
+- **Pull requests:** follow [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md).
+
+By contributing, you agree your contributions are licensed under the same terms as this project (MIT).

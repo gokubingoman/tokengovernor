@@ -1,17 +1,25 @@
-# Upgrade notes (Lite)
+# Staying current — TokenGovernor Lite
 
-This repo is **TokenGovernor Lite** — Markdown rules only.
+TokenGovernor Lite updates when the Markdown kit on the default branch (or a release tag) changes. Your project keeps whatever copy you vendor — refresh when you want upstream fixes or new packs.
 
-## Staying current
+---
 
-1. Pull the latest `main` (or a release tag) from **this** repository.
-2. Merge or re-copy **`universal/`**, **`cursor/`**, **`packs/`**, and optionally **`workspace-memory/`** into your project.
-3. If you customized any file, use your usual diff/review flow.
+## Refreshing your copy
 
-## Plus users
+1. Pull the latest **`main`** (or a **release tag**) from [TokenGovernor](https://github.com/gokubingoman/tokengovernor).
+2. Merge or copy **`universal/`**, **`cursor/`**, **`packs/`**, and **`workspace-memory/`** into your vendored folder.
+3. If you customized any file, diff against upstream and re-apply your changes.
 
-If you use **TokenGovernor Plus**, follow its **`tg`** / release workflow to refresh vendored rules and templates in app repos.
+Submodules: `git submodule update --remote` (or pin to tags for stability).
 
-## Shell output
+---
 
-For **shell compression**, see [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md).
+## If you use TokenGovernor Plus
+
+Use the **`tg`** workflow and release notes from your **Plus** distribution to refresh rules and templates inside application repos.
+
+---
+
+## RTK
+
+For **shell output** pairing, see [docs/RTK_PAIRING.md](docs/RTK_PAIRING.md).

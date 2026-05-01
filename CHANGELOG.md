@@ -1,12 +1,19 @@
 # Changelog
 
-All notable changes to **TokenGovernor Lite** (this repo) are documented here.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+Notable changes to **TokenGovernor Lite** follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
 ### Changed
 
-- **Repo split:** this repository is now **Lite** (rules + docs only). **TokenGovernor Plus** carries the CLI, benchmarks, full template pipeline, and advanced examples (e.g. extended coding-norm packs).
-- README and install docs updated for copy/submodule workflows and Plus upgrade path.
+- Documentation refresh across README, installation, upgrade, security, RTK pairing, contributing notes, packs, tool integrations, and workspace-memory — single **customer-facing** voice for teams adopting the kit.
+
+## [0.1.0] — 2025-05-01
+
+### Added
+
+- Initial **Lite** release: **`universal/`**, **`cursor/`**, **`packs/`**, **`workspace-memory/`**, and pairing documentation — Markdown-only open edition alongside **TokenGovernor Plus**.
+
+### Changed
+
+- **Product editions:** open **Lite** (this repository) for copy and submodule workflows; **Plus** hosts **`tg`**, benchmarks, and the extended template pipeline.
