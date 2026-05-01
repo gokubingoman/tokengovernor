@@ -8,7 +8,7 @@ Notable changes to **TokenGovernor Lite** follow [Keep a Changelog](https://keep
 
 - Documentation refresh across README, installation, upgrade, security, RTK pairing, contributing notes, packs, tool integrations, and workspace-memory — single **customer-facing** voice for teams adopting the kit.
 
-## [0.1.0] — 2025-05-01
+## [0.1.0] — 2026-05-01
 
 ### Added
 
