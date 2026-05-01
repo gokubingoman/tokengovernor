@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 22 22" role="img" aria-labelledby="title desc">
   <title id="title">TokenGovernor</title>
-  <desc id="desc">Rounded square mark matching the TokenGovernor landing nav — off-white to zinc gradient with a subtle edge.</desc>
+  <desc id="desc">Shield mark — off-white to zinc gradient with a subtle edge, matching the landing nav.</desc>
   <defs>
     <linearGradient id="navTile" gradientUnits="userSpaceOnUse" x1="2" y1="2" x2="20" y2="20">
       <!-- Aligns with landing: linear-gradient(145deg, #fafafa 0%, #52525b 100%) -->
@@ -8,15 +8,18 @@
       <stop offset="100%" stop-color="#52525b"/>
     </linearGradient>
   </defs>
-  <rect
-    x="0.5"
-    y="0.5"
-    width="21"
-    height="21"
-    rx="6"
-    ry="6"
+  <!-- Heater-style shield: flat top band, taper to point -->
+  <path
     fill="url(#navTile)"
-    stroke="rgba(255, 255, 255, 0.12)"
+    stroke="rgba(255, 255, 255, 0.14)"
     stroke-width="1"
+    stroke-linejoin="round"
+    d="M11 2.25
+       L18.25 5.35
+       L18.25 12.85
+       C18.25 16.35 15.15 19.15 11 20.55
+       C6.85 19.15 3.75 16.35 3.75 12.85
+       L3.75 5.35
+       Z"
   />
 </svg>
